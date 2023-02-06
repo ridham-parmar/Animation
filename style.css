@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(rgba(102,116,204,0.4) , rgba(255,255,255)); 
+    position: relative;
+}
+
+img {
+   opacity: 0;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(0.71, 0.01, 1, 0.78);
+    /* animation-timing-function: cubic-bezier(0.47, 0.01, 1, 0.78); */
+}
+
+@keyframes logo {
+    0% {
+        filter: blur(0px);
+        opacity: 0;
+        transform: scale(0);
+    }
+   
+    40% {
+        filter: blur(0px);
+        opacity: 1;
+        transform:scale(2.0);
+        
+    }
+    100% {
+        filter: blur(2px);
+        opacity: 0.6;
+        transform:scale(5)
+    }
+}
